@@ -1,0 +1,4 @@
+.container mat-card {
+  margin-bottom: 32px;
+  cursor: pointer;
+}

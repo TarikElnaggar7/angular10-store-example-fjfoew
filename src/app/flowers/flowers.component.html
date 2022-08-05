@@ -1,0 +1,18 @@
+<div class="container" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start"
+	*ngIf="(flowers$|async).length > 0; else noItems">
+	<mat-card class="example-card" *ngFor="let flower of (flowers$|async)" fxFlex="0 1 calc(33.3% - 32px)"
+		(click)="details(flower)">
+		<mat-card-header>
+			<mat-card-title>{{flower.title}}</mat-card-title>
+		</mat-card-header>
+		<img mat-card-image [src]="flower.image_url" alt="{{flower.title}}" />
+		<mat-card-content>
+			<p class="ellipsis">{{flower.content}}</p>
+		</mat-card-content>
+	</mat-card>
+</div>
+<ng-template #noItems>
+	<mat-card class="example-card" align-items="center">
+		No search results found.
+	</mat-card>
+</ng-template>

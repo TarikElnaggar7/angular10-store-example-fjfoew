@@ -1,0 +1,18 @@
+/* Add application styles & imports to this file! */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+  margin: 0;
+}
+* :not(.mat-icon) {
+  font-family: "Raleway", sans-serif !important;
+}
+
+.container {
+  margin: 16px;
+}
+
+.mat-card-image:first-child {
+  margin-top: 0px !important;
+}

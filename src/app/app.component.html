@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" fxLayout>
+	<h1 fxLayoutAlign="start center" fxFlex [routerLink]="'flowers'">
+		Flowers
+	</h1>
+	<mat-form-field class="example-full-width" fxFlex fxLayoutAlign="center center" floatLabel="never"
+		*ngIf="(currentUrl$|async) !== 'profile'">
+		<mat-label>Search Flowers</mat-label>
+		<input matInput (keyup)="search($event)" />
+  </mat-form-field>
+		<div fxFlex fxLayoutAlign="end center">
+			<button mat-button [routerLink]="'profile'">Profile</button>
+		</div>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+	<mat-sidenav-content>
+		<router-outlet></router-outlet>
+	</mat-sidenav-content>
+</mat-sidenav-container>

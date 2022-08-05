@@ -1,0 +1,7 @@
+.mat-toolbar .mat-icon-button {
+  height: auto;
+}
+h1 {
+  outline: none;
+  cursor: pointer;
+}

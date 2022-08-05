@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content class="mat-typography">
+	<mat-card-content fxLayout="row" fxLayoutGap="32px">
+		<img mat-card-image [src]="data.image_url" alt="{{data.title}}" fxFlex="50">
+		<div fxLayout="column" fxFlex="50">
+			<iframe [src]="sanitizeUrl(data.video_url)"> </iframe>
+			<p class="ellipsis">{{data.content}} </p>
+		</div>
+	</mat-card-content>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
